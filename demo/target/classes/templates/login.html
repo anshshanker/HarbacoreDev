@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Login Please</title>
+</head>
+<body>
+<h1>Login page.</h1>
+<form action="#" th:action="@{/verify}" th:object="${specimenDTO}" method="post">
+
+    email : <input type="email" name="Email-Id" th:field="*{email}" /><br/>
+    password : <input type="password" name="Password" th:field="*{password}" /><br/>
+    <button name="Submit" type="submit" value="0">Log in with above credentials.</button>
+
+    <form />
+</body>
+</html>
