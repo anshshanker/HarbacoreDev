@@ -3,21 +3,13 @@ package com.example.demo.dto;
 import javax.persistence.*;
 
 @Entity
-@Table(name="hbc_user")
 public class SpecimenDto {
 
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "sno")
     private int sno;
-    @Id
-    @Column(name = "email")
     private String email;
-    @Column(name = "username")
     private String username;
-    @Column(name = "gstin")
     private String gstin;
-    @Column(name = "password")
     private String password;
 
 

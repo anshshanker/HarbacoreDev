@@ -20,7 +20,7 @@ public class SpecimenService implements ISpecimenService{
     }
 
     @Override
-    public Optional<SpecimenDto> findById(String id)throws Exception{
+    public SpecimenDto findById(String id)throws Exception{
         return specimenDAO.findById(id);
     }
 

@@ -39,8 +39,9 @@ public class cont {
 
     @PostMapping("/saveuser")
     public String verification(SpecimenDto specimenDTO) throws Exception {
-        if(specimenService.existsById(specimenDTO.getEmail()))
+        /*if(specimenService.existsById(specimenDTO.getEmail()))
             return "Registerform";
+        */
         try {
             specimenService.save(specimenDTO);
         }
@@ -62,7 +63,7 @@ public class cont {
         if(!specimenService.existsById(specimenDTO.getEmail()))
             return "login";
         try{
-            SpecimenDto specimenDto1 = specimenService.findById(specimenDTO.getEmail()).get();
+            SpecimenDto specimenDto1 = specimenService.findById(specimenDTO.getEmail());
             if(!specimenDto1.getPassword().equals(specimenDTO.getPassword()))
                 return "login";
             String jwt=jwtUtils.createJWT(specimenDto1,3600*1000);

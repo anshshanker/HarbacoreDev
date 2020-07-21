@@ -7,8 +7,7 @@ import java.util.Optional;
 public interface ISpecimenService {
     boolean save(SpecimenDto specimenDTO)throws Exception;
 
-    Optional<SpecimenDto> findById(String id)throws Exception;
+    SpecimenDto findById(String id)throws Exception;
 
     boolean existsById(String id)throws Exception;
-
 }
