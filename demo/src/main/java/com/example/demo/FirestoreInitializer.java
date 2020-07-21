@@ -26,4 +26,5 @@ public class FirestoreInitializer {
     public Firestore getDb() {
         return db;
     }
+
 }

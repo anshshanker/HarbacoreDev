@@ -1,20 +1,26 @@
 package com.example.demo.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
+
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class SpecimenDto {
 
 
+
     private int sno;
+    @Id
     private String email;
     private String username;
     private String gstin;
     private String password;
 
 
-    public SpecimenDto() {
-    }
 
     public String getEmail() {
         return email;
